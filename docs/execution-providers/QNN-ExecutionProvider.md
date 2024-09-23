@@ -370,7 +370,7 @@ The QNN Execution Provider supports a number of session options to configure thi
 
 ### Dump QNN context binary
 1. Create session option, set "ep.context_enable" to "1" to enable QNN context dump. The key "ep.context_enable" is defined as kOrtSessionOptionEpContextEnable in [onnxruntime_session_options_config_keys.h](https://github.com/microsoft/onnxruntime/blob/8931854528b1b2a3f320d012c78d37186fbbdab8/include/onnxruntime/core/session/onnxruntime_session_options_config_keys.h#L239-L252).
-2. Create the session with the QDQ model using session options created in step 1, and use HTP backend
+2. Create the session with the QDQ model using session options created in step 1, and use HTP backend.
 A Onnx model with QNN context binary will be created once the session is created/initialized. No need to run the session.
 The QNN context binary generation can be done on the QualComm device which has HTP using Arm64 build. It can also be done on x64 machine using x64 build (not able to run it since there's no HTP device).
 
